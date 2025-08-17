@@ -31,8 +31,8 @@
 
 ```lisp
 ;; 合租一个 i32 大小内存。鼠标悬浮在 n 上，会告诉你当前是几位合租。
-(lets n a (i32))
-(lets n b a)
+(lets 'n' a (i32))
+(lets 'n' b a)
 ```
 
 ## 我有一个“大宝贝”
@@ -79,7 +79,7 @@
 - 我想要和朋友们合租一辆车
 
   ```ts
-  (defun create_car () (relets n Car)
+  (defun create_car () (relets 'n' Car)
     (let car (Car))
     (return car)
   )
@@ -164,8 +164,8 @@ Lisp 风格：数字标识合租人数，例如 `(lets 2 a (i32))`
 例如：编译器自动计算`‘n’`个变量共有 i32
 
 ```ts
-(lets n a (i32))
-(lets n b a)
+(lets 'n' a (i32))
+(lets 'n' b a)
 ```
 
 ### 转移租赁
